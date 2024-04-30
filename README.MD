@@ -30,3 +30,9 @@ npm view eslint versions
 # npm view <package_name> version>
 # npm view <package_name> versions>
 ```
+
+example of supoorted browsers [Link🔗](https://browserslist.dev/)
+
+```json
+"browserlist":["last 2 versions", "not dead"]
+```

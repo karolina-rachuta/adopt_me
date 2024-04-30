@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "dev": "parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +19,22 @@
     "url": "https://github.com:karolina-rachuta/adopt_me/issues"
   },
   "homepage": "https://github.com:karolina-rachuta/adopt_me#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint": "8.13",
+    "eslint-config-prettier": "8.5",
+    "eslint-plugin-import": "2.26",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "parcel": "^2.4.1",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "browserlist": [
+    "last 2 versions",
+    "not dead"
+  ]
 }

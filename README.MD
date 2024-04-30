@@ -21,6 +21,8 @@ npm i -D prettier@3.2.5
 npm i -D eslint@9.1.1 eslint-config-prettier@9.1.0
 ```
 
+- Module Bundler (Webpack, Parcel)
+
 ##Snippets
 
 ```bash

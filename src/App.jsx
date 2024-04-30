@@ -7,6 +7,7 @@ function App() {
             <Pet name="Luna" animal="Dog" breed="Havanese"/>
             <Pet name="Pepper" animal="Bird" breed="Cockatiel"/>
         </div>
-    )
-};
+    );
+}
+
 export default App;

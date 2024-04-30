@@ -7,7 +7,7 @@ function Pet({name, animal, breed}) {
             <h3 >{animal}</h3>
             <h3 >{breed}</h3>
         </div >
-    )
+    );
 }
 
 export default Pet;

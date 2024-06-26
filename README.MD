@@ -1,5 +1,5 @@
 # Adopt me
-
+React - GUI - SPA or PWA
 ## Dictionary
 
 - CDN (Content Delivery Network) - server assets (js, css, images):

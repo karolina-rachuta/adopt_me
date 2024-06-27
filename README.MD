@@ -9,6 +9,7 @@ React - GUI - SPA or PWA
 - SPA - single page application (brak przeładowań strony, przypomina aplikacje desktopowe)
 - PWA - progressive web apps - to SPA, ale działa bez internetu, np. starbucks - apka gdzie mozna zamówić i zapłacić za nią bez interentu
 - SSR - server side rendering (piszemy aplikację, ale nie przeglądarka renderuje tą stronę tylko robi to server, działa szybciej niz normalna aplikacja plus wtedy google boty widzą ten HTML i mogą go indeksować)
+- Memoizing - cache function result instead call it twice with the same parameters, only for pure functions and limited combination of parameters value
 
 ## Tools
 

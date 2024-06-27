@@ -11,9 +11,11 @@ function useBreedList(animal) {
     }, [animal]);
 
     async function requestBreedList() {
+        setBreedList([]);
         const response = await fetch(`http://pets-v2.dev-apis.com/breeds?animal=${animal}`);
         const data = await response.json();
-        setBreedList(data.breeds);
+        //jesli data.breeds jest undefined to trzeba zaladowac mu pusta tablice
+        setBreedList(data.breeds || []);
     }
     //bedzie dwuwymiarowa tablica
     return [breedList];

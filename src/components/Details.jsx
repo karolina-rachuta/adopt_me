@@ -1,12 +1,11 @@
+import { Component } from "react";
 import { useParams } from "react-router";
 
-function Details() {
-    const params = useParams();
-    return (
-        <>
-        <h1>It works!haha {params.id}</h1>
-        </>
-    );
+//Component po czym dziedziczy = extends dziedziczenie innej klasy plub dowiazanie prototypowe
+class Details extends Component {
+  render() {
+    return <h1>it works</h1>;
+  }
 }
 
 export default Details;

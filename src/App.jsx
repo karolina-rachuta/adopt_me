@@ -1,13 +1,20 @@
-import Pet from "./components/Pet";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import SearchParams from "./components/SearchParams";
+import Details from "./components/Details";
+
 
 function App() {
-    return (
-        <div>
-            <h1>Adopt me!</h1>
-            <SearchParams />
-        </div>
-    );
+  return (
+    <BrowserRouter>
+      <Link to="/">
+        <h1>Adopt me!</h1>
+      </Link>
+      <Routes>
+        <Route path="/" element={<SearchParams />} />
+        <Route path="/details/:id" element={<Details />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

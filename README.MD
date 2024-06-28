@@ -45,6 +45,10 @@ example of supoorted browsers [Link🔗](https://browserslist.dev/)
 
 ```
 
+```bash
+npm install react-router@6 react-router-dom@6
+```
+
 ## Component
 - funkcyjny - renderuje React.createElement()
 - classowy - 2 warunki:

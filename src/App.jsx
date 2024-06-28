@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import SearchParams from "./components/SearchParams";
-import Details from "./components/Details";
+import WrappedDetails from "./components/Details";
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       </Link>
       <Routes>
         <Route path="/" element={<SearchParams />} />
-        <Route path="/details/:id" element={<Details />} />
+        <Route path="/details/:id" element={<WrappedDetails />} />
       </Routes>
     </BrowserRouter>
   );

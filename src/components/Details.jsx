@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { useParams } from "react-router";
+import Carousel from "./Carousel";
 
 //Component po czym dziedziczy = extends dziedziczenie innej klasy plub dowiazanie prototypowe
 class Details extends Component {
@@ -12,7 +13,7 @@ class Details extends Component {
 
   async componentDidMount() {
     const response = await fetch(
-      `http://pets-v2.dev-apis.com/pets?id=${this.props.params.id}`,
+      `http://pets-v2.dev-apis.com/pets?id=${this.props.params.id}`, 
     );
     const data = await response.json();
     // this.setState({loading: false, ...data.pets[0]});
@@ -23,9 +24,9 @@ class Details extends Component {
     if (this.state.loading) {
       return <h2> Loading!</h2>;
     }
-    const { name, animal, breed, description, city, state } = this.state;
+    const { name, animal, breed, description, city, state, images } = this.state;
     return (
-      <div class="details">
+      <div className="details">
         <div>
           <h1>{name}</h1>
           <h2>
@@ -34,6 +35,7 @@ class Details extends Component {
           <button>Adopt Me!</button>
           <p>{description}</p>
         </div>
+        <Carousel images={images}/>
       </div>
     );
   };

@@ -36,7 +36,7 @@
     "react-router": "^6.24.0",
     "react-router-dom": "^6.24.0"
   },
-  "browserlist": [
+  "browserslist": [
     "last 2 versions",
     "not dead"
   ]

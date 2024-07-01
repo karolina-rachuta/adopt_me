@@ -3,15 +3,12 @@ import { useParams } from "react-router";
 
 //Component po czym dziedziczy = extends dziedziczenie innej klasy plub dowiazanie prototypowe
 class Details extends Component {
-  constructor() {
-    super();
-
-    //tylko jeden stan
-    this.state = {
+  //pole klasy, ale aby uzyc uzywamy formy this.state
+  state = {
       loading: true,
     };
-    //aby go zmodyfikowac uzywamy metody this.setState
-  }
+
+  
 
   async componentDidMount() {
     const response = await fetch(
@@ -28,7 +25,7 @@ class Details extends Component {
     }
     const { name, animal, breed, description, city, state } = this.state;
     return (
-      <div>
+      <div class="details">
         <div>
           <h1>{name}</h1>
           <h2>
@@ -39,12 +36,13 @@ class Details extends Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
+
 // w react router 6 nie mozna w komponencie klasowym zczytywac parametrow z url, wiec uzywamy higher order component (funkcyjny):
 function WrappedDetails() {
   const params = useParams();
   return <Details params={params} />;
-}
+};
 
 export default WrappedDetails;

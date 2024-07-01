@@ -46,7 +46,12 @@ example of supoorted browsers [Link🔗](https://browserslist.dev/)
 ```
 
 ```bash
+// instalacja React Router
 npm install react-router@6 react-router-dom@6
+
+// plus plik .babelrc - BABEL słuzy do transpilacji = transforamcja + kompilacja
+// dodatek Proposal Class Properties: aby moc zmienic sposob pisania klas w js
+npm i -D @babel/plugin-proposal-class-properties@7.16.7
 ```
 
 ## Component

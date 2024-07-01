@@ -28,6 +28,7 @@ npm i -D eslint@9.1.1 eslint-config-prettier@9.1.0
 - Module Bundler (Webpack, Parcel)
 - Storybook - program do testowania komponentów, trzymanie templatów komponentów
 - State Managment library - (Flux, Redux, Mobx)
+- Sentry JS - paczka do logowania błędów
 
 ##Snippets
 

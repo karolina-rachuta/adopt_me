@@ -25,6 +25,8 @@ class Details extends Component {
     }
     const { name, animal, breed, description, city, state, images } =
       this.state;
+  // triggerowanie bledu
+  //throw new Error ("ghjhgerrror")
     return (
       <div className="details">
         <div>

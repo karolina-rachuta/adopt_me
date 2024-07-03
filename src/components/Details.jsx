@@ -2,6 +2,7 @@ import { Component } from "react";
 import { useParams } from "react-router";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
+import ThemeContext from "./ThemeContext";
 
 //Component po czym dziedziczy = extends dziedziczenie innej klasy plub dowiazanie prototypowe
 class Details extends Component {
@@ -25,8 +26,8 @@ class Details extends Component {
     }
     const { name, animal, breed, description, city, state, images } =
       this.state;
-  // triggerowanie bledu
-  //throw new Error ("ghjhgerrror")
+    // triggerowanie bledu
+    //throw new Error ("ghjhgerrror")
     return (
       <div className="details">
         <div>
@@ -34,7 +35,14 @@ class Details extends Component {
           <h2>
             {animal} - {breed} - {city}, {state}
           </h2>
-          <button>Adopt Me!</button>
+          <ThemeContext.Consumer>
+            {([theme]) => {
+              return (
+                <button style={{ backgroundColor: theme }}>Adopt {name}!</button>
+              );
+            }}
+          </ThemeContext.Consumer>
+
           <p>{description}</p>
         </div>
         <Carousel images={images} />

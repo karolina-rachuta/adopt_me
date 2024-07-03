@@ -28,7 +28,8 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
     "parcel": "^2.4.1",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "process": "^0.11.10"
   },
   "dependencies": {
     "react": "^18.0.0",

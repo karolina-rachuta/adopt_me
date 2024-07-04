@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import Pet from "./Pet";
 import useBreedList from "../hooks/useBreedList";
 import Results from "./Results";
 import ThemeContext from "./ThemeContext";
+import { useSearchParams } from "react-router-dom";
 
 const animals = ["bird", "cat", "dog", "rabbit", "reptile"];
 
@@ -13,6 +13,7 @@ function SearchParams() {
   const [pets, setPets] = useState([]);
   const [breeds] = useBreedList(animal);
   const [theme, setTheme] = useContext(ThemeContext);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     requestPets().catch(() => {});
@@ -30,6 +31,12 @@ function SearchParams() {
   function handleSubmit(event) {
     event.preventDefault();
     requestPets();
+    const queryParams = {};
+    if (location) queryParams.location = location;
+    if (breed) queryParams.breed = breed;
+    if (animal) queryParams.animal = animal;
+
+    setSearchParams(queryParams);
   }
 
   return (
@@ -98,7 +105,7 @@ function SearchParams() {
           <option value="pink">Pink</option>
           <option value="blue">Blue</option>
         </select>
-        
+
         <button type="submit" style={{ backgroundColor: theme }}>
           Submit
         </button>

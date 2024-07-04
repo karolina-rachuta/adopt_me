@@ -7,16 +7,17 @@ import { useSearchParams } from "react-router-dom";
 const animals = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 function SearchParams() {
-  const [location, setLocation] = useState("");
-  const [animal, setAnimal] = useState("");
-  const [breed, setBreed] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [location, setLocation] = useState(searchParams.get('location') || "");
+  const [animal, setAnimal] = useState(searchParams.get("animal" || ""));
+  const [breed, setBreed] = useState(searchParams.get('breed' || ""));
   const [pets, setPets] = useState([]);
   const [breeds] = useBreedList(animal);
   const [theme, setTheme] = useContext(ThemeContext);
-  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     requestPets().catch(() => {});
+    console.log(searchParams)
   }, []);
 
   async function requestPets() {

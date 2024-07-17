@@ -7,7 +7,6 @@ function Pet({name, animal, breed, images, location, id}) {
     }
 
     return (
-        //a przeladowywuje strone
         
         <Link to={`details/${id}`} className="pet">
             <div className="image-container">

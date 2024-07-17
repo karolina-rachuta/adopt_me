@@ -10,8 +10,6 @@ function Modal({children}) {
   useEffect(() => {
     const modalRoot = document.getElementById("modal");
     modalRoot.appendChild(elementRef.current);
-
-    //funkcja wykonana po odmontowaniu komponentu
     return () => {
       modalRoot.removeChild(elementRef.current);
     };

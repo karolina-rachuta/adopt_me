@@ -17,7 +17,6 @@ function SearchParams() {
 
   useEffect(() => {
     requestPets().catch(() => {});
-    console.log(searchParams)
   }, []);
 
   async function requestPets() {
@@ -63,15 +62,13 @@ function SearchParams() {
           }}
           onBlur={(e) => {
             setAnimal(e.target.value);
-          }}
-        >
+          }}>
           <option />
           {animals.map((animal) => (
             <option value={animal} key={animal}>
               {animal}
             </option>
-          ))}
-          ;
+          ))};
         </select>
 
         <label htmlFor="breed">Breed</label>

@@ -6,12 +6,8 @@ class ErrorBoundary extends Component {
     hasError: false,
     redirect: false,
   };
-  //metoda z life cycle component
-  //co to jest za blad, aby wyswietlic bledy
-  //monitoring- jak dziala aplikacja w danym momencie i logowanie-  zapisywanie wszystkich bledow
-  //ta metida aby logowac bledy
+
   static getDerivedStateFromError() {
-    //zwracany nowy obiect hasError, kiedy dziecko bedzie miec bledy
     return {
       hasError: true,
     };

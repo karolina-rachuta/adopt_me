@@ -11,9 +11,6 @@ React application to adopt animals based on their breeds and location.
 - `npm run dev`
 - profit!
 
-## Link to live version:
-[click](https://todo-ebf44.web.app/)
-
 ## Screenshots:
 ![screenshot](./src/assets/main.png)
 
